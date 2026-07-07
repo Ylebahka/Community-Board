@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if (mysqli_stmt_execute($stmt)) {
             if (mysqli_stmt_affected_rows($stmt) > 0) {
-                header("Location: homework.php");
+                header("Location: home.php");
                 exit();
             } else {
                 echo "Registration failed.";
@@ -69,7 +69,7 @@ $result = mysqli_query($con, $query);
         <!-- Form Creator Modal Window -->
         <div id="form-creator-modal" class="modal CenterContent" style="display: none;">
             <span class="close"  id="close-form-creator">&times;</span>
-            <form id="form-creator-form" class="CenterContent" action="homework.php" method="post">
+            <form id="form-creator-form" class="CenterContent" action="home.php" method="post">
                 <div class="LoginInput">
                     <label><h1>Form Label:</h1></label>
                     <input class="InputField FormInput" type="text" name="form_label" id="form-label" maxlength="40">
